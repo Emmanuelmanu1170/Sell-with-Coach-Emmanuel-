@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coach Emmanuel | Affiliate Transformation</title>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #0f9d58;
+      --white: #ffffff;
+      --light: #f4fdf7;
+      --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+header {
+  background: var(--green);
+  color: var(--white);
+  padding: 40px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+section {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 14px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--green);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+button {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #0c7b43;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+#channel ul {
+  padding: 0;
+  list-style: none;
+}
+
+#channel li {
+  background: #e8f8f0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://i.ibb.co/3rGyFzF/coach-emmanuel-logo.jpg" alt="Coach Emmanuel" class="logo" />
+      <h1>Coach Emmanuel’s Affiliate Transformation</h1>
+      <p>Make money online with your phone. Real strategies. Real mentorship. No fluff.</p>
+    </header><section>
+  <h2>The Problem</h2>
+  <p>You’ve tried making money online, but nothing worked. You're tired of wasting data with no results. You need something real and proven — designed for you, right here in Africa.</p>
+</section>
+
+<section>
+  <h2>What You’ll Learn</h2>
+  <ul>
+    <li>How to make 400 GHS weekly with affiliate marketing</li>
+    <li>WhatsApp & TikTok automation tools that do the work</li>
+    <li>How to turn your phone into a digital cash machine</li>
+    <li>Access to private video guides and tools</li>
+    <li>One-on-one mentorship from Coach Emmanuel</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Why This Works</h2>
+  <p>We’ve simplified affiliate marketing into 3 steps — learn, copy, earn. You don’t need any special skills or audience. It’s beginner-friendly, mobile-friendly, and trusted by 1000+ Ghanaians.</p>
+</section>
+
+<section id="payment">
+  <h2>One-Time Access — 119 GHS</h2>
+  <p>Click below to pay securely with Paystack. After payment, you’ll see links to join my private Telegram group.</p>
+  <button onclick="payWithPaystack()">Pay Now to Join</button>
+  <p id="paymentStatus"></p>
+</section>
+
+<section id="channel" style="display:none;">
+  <h2>🎉 You're In!</h2>
+  <p>Click a link below to join our private group:</p>
+  <ul>
+    <li><a href="https://t.me/+t_XdHhkSOWszMmFk" target="_blank">Group 1</a></li>
+    <li><a href="https://t.me/+qjxMBjWE77c0YmY0" target="_blank">Group 2</a></li>
+    <li><a href="https://t.me/+LH6Fv4HspjJlOTM0" target="_blank">Group 3</a></li>
+  </ul>
+</section>
+
+<div class="contact">
+  📩 Contact me: <a href="mailto:kwabenaemma0554263293@gmail.com">kwabenaemma0554263293@gmail.com</a>
+</div>
+
+  </div>  <script>
+    function payWithPaystack() {
+      let handler = PaystackPop.setup({
+        key: 'pk_live_ddbf47d168d6849ef29050ffc35c98a12e11e38b',
+        email: 'user@example.com',
+        amount: 119 * 100,
+        currency: 'GHS',
+        callback: function(response){
+          document.getElementById("paymentStatus").textContent = "✅ Payment successful! Welcome.";
+          document.getElementById("channel").style.display = "block";
+        },
+        onClose: function(){
+          alert('Payment closed. Try again if you want access.');
+        }
+      });
+      handler.openIframe();
+    }
+  </script></body>
+</html>
